@@ -1,0 +1,253 @@
+// 1530px
+@include xxlg-xxxlg {
+  // base start
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    &.big {
+      font-size: 40px;
+    }
+  }
+  //   base end
+  // hero start
+  @include hero-xxlg-xxxlg;
+  // hero end
+}
+// 1280px
+@include xlg-xxlg {
+  // base start
+  h1 {
+    font-size: 38px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+    &.sm {
+      font-size: 24px;
+      line-height: 34px;
+    }
+    &.big {
+      font-size: 35px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  h6 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .auto__container {
+    padding: 0 20px;
+  }
+  .button {
+    &.light {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 10px 25px;
+    }
+  }
+  .userPop {
+    &__menu {
+      right: -10px;
+      min-width: 200px;
+      a,
+      button {
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+    &__btn {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .circle {
+    width: 130px;
+    height: 130px;
+  }
+  .main {
+    padding-top: 71px;
+  }
+  @include header-xlg-xxlg;
+  // base end
+  // profile start
+  @include profile-xlg-xxlg;
+  // profile end
+  // post start
+  @include post-xlg-xxlg;
+  // post end
+  // post start
+  @include post-xlg-xxlg;
+  // post end
+  // user start
+  @include user-xlg-xxlg;
+  // user end
+  // addProduct start
+  @include addProduct-xlg-xxlg;
+  @include more-xlg-xxlg;
+  @include upload-xlg-xxlg;
+  // addProduct end
+  // join end
+  @include hero-xlg-xxlg;
+  @include story-xlg-xxlg;
+  @include brands-xlg-xxlg;
+  @include place-xlg-xxlg;
+  // join end
+}
+// 1024px
+@include lg-xlg {
+  // base start
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 34px;
+    &.sm {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    &.big {
+      font-size: 28px;
+    }
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+  //   base end
+  @include more-lg-xlg;
+  @include upload-lg-xlg;
+  @include profile-lg-xlg;
+  @include user-lg-xlg;
+  @include footer-lg-xlg;
+  // join start
+  @include hero-lg-xlg;
+  @include story-lg-xlg;
+  @include brands-lg-xlg;
+  @include place-lg-xlg;
+  @include steps-lg-xlg;
+  @include proud-lg-xlg;
+  // join end
+}
+// 840px
+@include md-lg {
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    &.big {
+      font-size: 24px;
+    }
+  }
+  .main {
+    padding-top: 65px;
+  }
+  @include header-md-lg;
+  @include profile-md-lg;
+  // join start
+  @include hero-md-lg;
+  @include story-md-lg;
+  @include brands-md-lg;
+  @include master-md-lg;
+  @include place-md-lg;
+  @include steps-md-lg;
+  @include proud-md-lg;
+  // join end
+}
+// 700px
+@include sm-md {
+  // base start
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 24px;
+    &.sm {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    &.big {
+      font-size: 22px;
+    }
+  }
+  h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @include upHeader-sm-md;
+  // base end
+  @include addProduct-sm-md;
+  @include upload-sm-md;
+  @include more-sm-md;
+  @include profile-sm-md;
+  @include user-sm-md;
+  .main {
+    padding-top: 0;
+    min-height: unset;
+  }
+  @include header-sm-md;
+  @include footer-sm-md;
+  @include post-sm-md;
+  // join start
+  @include hero-sm-md;
+  @include master-sm-md;
+  @include place-sm-md;
+  @include steps-sm-md;
+  // join end
+}
+// 540px
+@include xsm-sm {
+  // base start
+  .button {
+    &.primary {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 14px 30px;
+      &.sm {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 14px 30px;
+      }
+    }
+  }
+  // base end
+  @include addProduct-xsm-sm;
+  @include more-xsm-sm;
+  @include upload-xsm-sm;
+  @include profile-xsm-sm;
+  @include user-xsm-sm;
+  @include footer-xsm-sm;
+  // join start
+  @include hero-xsm-sm;
+  @include story-xsm-sm;
+  @include brands-xsm-sm;
+  @include place-xsm-sm;
+  @include steps-xsm-sm;
+  @include proud-xsm-sm;
+  // join end
+}
+// 400px
+@include xxsm-xsm {
+  // join start
+  @include steps-xxsm-xsm;
+  // join end
+}
+// 360px
+@include xxxsm-xxsm {
+  // join start
+  @include steps-xxxsm-xxsm;
+  // join end
+}

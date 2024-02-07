@@ -1,0 +1,425 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e3ea;
+  z-index: 10;
+  .auto__container {
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-shape {
+      display: none;
+    }
+    &-logo {
+      width: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 50px;
+      img {
+        width: 100%;
+      }
+    }
+    &-link {
+      padding: 12px 22px;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      color: $black;
+      border-radius: 50px;
+      background: transparent;
+      display: block;
+      text-transform: uppercase;
+      margin-right: 12px;
+      svg {
+        display: none;
+      }
+      &.mob {
+        display: none;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.active {
+        background: $black;
+        color: $white;
+      }
+      &.insta {
+        padding: 0;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        padding: 12px;
+        color: #000000;
+        svg {
+          display: inline-block;
+          width: 22px;
+          height: 22px;
+          margin-right: 8px;
+        }
+      }
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+      .userPop {
+        margin-left: 12px;
+      }
+    }
+  }
+  .button {
+    svg {
+      display: none;
+    }
+  }
+}
+.header2 {
+  display: none;
+}
+.userPop {
+  position: relative;
+  &__menu {
+    position: absolute;
+    top: 100%;
+    right: -5px;
+    min-width: 224px;
+    padding: 16px;
+    border-radius: 20px;
+    border: 1px solid #e7e7e7;
+    box-shadow: 50px 95px 135px rgba(122, 119, 137, 0.44);
+    background-color: $white;
+    box-sizing: border-box;
+    margin-top: 10px;
+
+    &::before {
+      position: absolute;
+      bottom: 100%;
+      right: 22px;
+      width: 14px;
+      height: 14px;
+      border-top: 1px solid #d9d9d9;
+      border-right: 1px solid #d9d9d9;
+      border-top-right-radius: 4px;
+      content: "";
+      transform: translateY(7px) rotate(-45deg);
+      background-color: $white;
+    }
+    a,
+    button {
+      background: transparent;
+      font-family: $mainFont;
+      font-size: 16px;
+      line-height: 120%;
+      color: $black;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      @include transition;
+      cursor: pointer;
+      text-transform: capitalize;
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+      }
+      &:hover {
+        opacity: 1;
+        color: $primary;
+      }
+    }
+    hr {
+      width: 100%;
+      height: 1px;
+      background-color: #e5e5e5;
+      margin: 14px 0;
+      position: relative;
+      transform: rotate(-0.6deg);
+      transform-origin: left;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #e0e3ea;
+    border-radius: 60px;
+    color: #292d32;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+@mixin header-xlg-xxlg {
+  .header {
+    padding: 12px 0;
+    &__inner {
+      &-logo {
+        width: 100px;
+        margin-right: 25px;
+      }
+      &-link {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 10px 16px;
+      }
+    }
+  }
+}
+@mixin header-md-lg {
+  .header {
+    &__inner {
+      &-link {
+        &.insta {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@mixin header-sm-md {
+  .header {
+    position: fixed;
+    top: unset;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    transform: translateY(130px);
+    z-index: 20;
+    filter: drop-shadow(0px 35px 80px rgba(128, 145, 171, 0.89));
+    @include transition;
+    &.active {
+      transform: translateY(0);
+    }
+    &::before {
+      width: 30%;
+      background: $white;
+      top: 0;
+      left: 0;
+      height: 100%;
+      position: absolute;
+      content: "";
+    }
+    &::after {
+      width: 30%;
+      background: $white;
+      right: 0;
+      top: 0;
+      height: 100%;
+      position: absolute;
+      content: "";
+      z-index: -1;
+    }
+    &__inner {
+      z-index: 22;
+      &-link {
+        &.insta {
+          display: none;
+        }
+      }
+      &-shape {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        @include transformX;
+        z-index: -1;
+        width: 390px;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__inner {
+      &-row {
+        width: 0;
+        justify-content: space-between;
+
+        &:first-child {
+          width: 100%;
+        }
+      }
+      &-link {
+        flex-direction: column;
+        display: flex;
+        width: 75px;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        padding: 0;
+        height: 60px;
+        border-top: 2px solid transparent;
+        border-radius: 0;
+        color: #696e81;
+        font-size: 12px;
+        line-height: 16px;
+        margin: 0;
+        &.active {
+          background: linear-gradient(
+            180.56deg,
+            rgba(255, 186, 174, 0.32) 0.49%,
+            rgba(255, 186, 174, 0) 54.45%
+          );
+          border-top: 2px solid $primary;
+          color: $primary;
+          svg {
+            color: $primary;
+          }
+        }
+        &.pc {
+          display: none;
+        }
+        &.mob {
+          display: flex;
+        }
+        svg {
+          display: inline-block;
+          color: #888f98;
+          width: 22px;
+          height: 22px;
+          margin-bottom: 8px;
+        }
+      }
+      &-logo {
+        display: none;
+      }
+      .userPop {
+        display: none;
+      }
+    }
+    .button {
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      @include transformX;
+      width: 60px;
+      padding: 0;
+      height: 60px;
+      display: flex;
+      opacity: 1 !important;
+      align-items: center;
+      justify-content: center;
+      span {
+        display: none;
+      }
+      svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+        color: $white;
+      }
+    }
+  }
+  .header2 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e3ea;
+    z-index: 10;
+    background-color: $white;
+    &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-shape {
+        display: none;
+      }
+      &-logo {
+        width: 80px;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+        }
+      }
+      &-link {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 6px 12px;
+        font-weight: 500;
+        color: $black;
+        border-radius: 50px;
+        background: transparent;
+        display: block;
+        text-transform: uppercase;
+        margin-right: 7px;
+        svg {
+          display: none;
+        }
+        &.mob {
+          display: none;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          background: $black;
+          color: $white;
+        }
+        &.insta {
+          display: none;
+        }
+      }
+      &-row {
+        display: flex;
+        align-items: center;
+        .userPop {
+          margin-left: 6px;
+          &__menu {
+            &::before {
+              right: 18px;
+            }
+          }
+          &__btn {
+            width: 35px;
+            height: 35px;
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+      }
+    }
+    .button {
+      display: flex;
+      opacity: 1 !important;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      width: 35px;
+      height: 35px;
+      svg {
+        width: 18px;
+        height: 18px;
+        display: block;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}

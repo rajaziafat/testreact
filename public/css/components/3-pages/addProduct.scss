@@ -1,0 +1,342 @@
+.addProduct {
+  &__inner {
+    margin: 30px;
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 45px;
+    background: #fff;
+    box-shadow: 0px 15px 60px 0px rgba(228, 222, 228, 0.45);
+  }
+  &__form {
+    &-footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 -6px;
+      .button {
+        width: calc(33.3% - 12px);
+        margin: 0 6px;
+        max-width: 160px;
+      }
+    }
+  }
+}
+@mixin addProduct-xlg-xxlg {
+  .addProduct {
+    &__inner {
+      margin: 0;
+      padding: 32px 20px;
+    }
+  }
+}
+@mixin addProduct-sm-md {
+  .addProduct {
+    border-radius: 35px 35px 0px 0px;
+    background: #fff;
+    padding: 32px 0 130px 0;
+    &__inner {
+      box-shadow: unset;
+      border: unset;
+      border-radius: unset;
+      padding: 0;
+    }
+  }
+}
+@mixin addProduct-xsm-sm {
+  .addProduct {
+    &__form {
+      &-footer {
+        flex-direction: column;
+        max-width: 300px;
+        margin: 0 auto;
+        .button {
+          width: 100%;
+          margin: 0 0 12px 0;
+          max-width: unset;
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+.upload {
+  width: calc(50% - 15px);
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: #fff1ef80;
+  max-width: 480px;
+  position: relative;
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    img {
+      @include fullImage;
+    }
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  &__icon {
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary;
+    margin: 0 auto 20px auto;
+    svg {
+      width: 100%;
+    }
+  }
+  &__content {
+    position: absolute;
+    width: calc(100% - 30px);
+    left: 15px;
+    top: 50%;
+    @include transformY;
+    text-align: center;
+    h2 {
+      margin-bottom: 10px;
+    }
+    h4 {
+      color: $primary;
+    }
+  }
+  &__inner {
+    border-radius: 20px;
+    border: 2px dashed $primary;
+    padding-bottom: 150%;
+    position: relative;
+  }
+  &__list {
+    width: calc(50% - 15px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &-item {
+      display: flex;
+      align-items: center;
+      padding: 16px 20px;
+      border-radius: 50px;
+      background: #fff6f5;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 500;
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      svg {
+        color: $primary;
+        width: 20px;
+        min-width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
+@mixin upload-xlg-xxlg {
+  .upload {
+    &__list {
+      &-item {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+@mixin upload-lg-xlg {
+  .upload {
+    padding: 15px;
+  }
+}
+@mixin upload-sm-md {
+  .upload {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 24px;
+    &__inner {
+      padding-bottom: 63%;
+    }
+    &__row {
+      flex-direction: column;
+      margin-bottom: 30px;
+    }
+    &__list {
+      width: 100%;
+    }
+  }
+}
+@mixin upload-xsm-sm {
+  .upload {
+    &__icon {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 4px;
+    }
+    &__content {
+      h2.sm {
+        margin-bottom: 4px;
+      }
+    }
+    &__list {
+    }
+  }
+}
+.more {
+  padding: 24px;
+  border-radius: 12px;
+  background: #fff1ef80;
+  margin-bottom: 24px;
+  h4 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid $primary;
+    font-weight: 700;
+    color: $primary;
+  }
+  &Item {
+    width: calc(25% - 24px);
+    margin: 12px;
+    &__image {
+      padding-bottom: 110%;
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+    }
+    &__content {
+      padding: 16px 0 0 0;
+      p {
+        line-height: 30px;
+      }
+    }
+    &__status {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        color: #69b150;
+      }
+      &.red {
+        svg {
+          color: #ff4646;
+        }
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    margin: 0 -12px;
+  }
+}
+@mixin more-xlg-xxlg {
+  .more {
+    padding: 16px;
+    &__inner {
+      margin: 0 -6px;
+    }
+    &Item {
+      margin: 0 6px;
+      width: calc(25% - 12px);
+      &__status {
+        font-size: 14px;
+        line-height: 22px;
+        svg {
+          width: 20px;
+          height: 20px;
+          margin-right: 6px;
+        }
+      }
+      &__content {
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
+@mixin more-lg-xlg {
+  .more {
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &Item {
+      width: calc(33.3% - 12px);
+      margin: 6px;
+    }
+  }
+}
+@mixin more-sm-md {
+  .more {
+    &Item {
+      width: calc(50% - 12px);
+    }
+  }
+}
+@mixin more-xsm-sm {
+  .more {
+    &__inner {
+      margin: 0;
+    }
+    &Item {
+      margin: 0 0 20px 0;
+      width: 100%;
+      &__status {
+        font-size: 20px;
+        line-height: 26px;
+        svg {
+          width: 32px;
+          height: 32px;
+          margin-right: 15px;
+        }
+      }
+      &__content {
+        p {
+          font-size: 18px;
+          line-height: 35px;
+        }
+      }
+    }
+  }
+}

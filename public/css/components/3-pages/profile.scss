@@ -1,0 +1,253 @@
+.profile {
+  padding: 50px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  &Side {
+    width: 320px;
+    margin-right: 40px;
+    text-align: center;
+    &__link {
+      text-align: center;
+      color: $primary;
+      font-size: 22px;
+      line-height: 30px;
+      display: block;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    p {
+      line-height: 170%;
+      font-weight: 400;
+      margin-bottom: 10px;
+      color: #615c5c;
+    }
+    &__linktr {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      color: #5850b1;
+      justify-content: center;
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+    }
+    &__info {
+    }
+    &__name {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 10px;
+        color: #5850b1;
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__avatar {
+      position: relative;
+      padding-bottom: 120%;
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 24px;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include fullImage;
+      }
+      &-edit {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        border: 2px solid $white;
+        border-radius: 16px 0 0 0;
+        overflow: hidden;
+        background: $primary;
+        input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+        }
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &Main {
+    width: calc(100% - 360px);
+    .header__inner {
+      &-link {
+        display: none;
+      }
+    }
+    h3 {
+      margin-bottom: 16px;
+    }
+    &__inner {
+      padding: 32px 24px;
+      border-radius: 20px;
+      border: 1px solid #ebeaee;
+      background: #fff;
+      margin-bottom: 16px;
+      .check {
+        margin-bottom: 20px;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.note {
+  padding: 16px;
+  border: 1px solid $primary;
+  background: rgba(255, 246, 245, 0.47);
+  margin-bottom: 24px;
+  border-radius: 12px;
+  color: $primary;
+  display: flex;
+  align-items: flex-start;
+  svg {
+    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+  }
+  h6 {
+    max-width: 800px;
+    width: calc(100% - 26px);
+  }
+}
+@mixin profile-xlg-xxlg {
+  .profile {
+    &Side {
+      width: 360px;
+      margin-right: 20px;
+      &__link {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    &Main {
+      width: calc(100% - 380px);
+    }
+  }
+}
+@mixin profile-lg-xlg {
+  .profile {
+    &Side {
+      width: 240px;
+      &__avatar {
+        &-edit {
+          width: 40px;
+          height: 40px;
+          svg {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+    &Main {
+      width: calc(100% - 260px);
+    }
+  }
+}
+@mixin profile-md-lg {
+  .profile {
+    &__inner {
+      flex-direction: column;
+    }
+    &Side {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto 38px auto;
+      &__avatar {
+        width: 240px;
+        height: 300px;
+        padding: 0;
+        margin: 0 auto 25px auto;
+      }
+    }
+    &Main {
+      width: 100%;
+    }
+  }
+}
+@mixin profile-sm-md {
+  .profile {
+    border-radius: 35px 35px 0px 0px;
+    background: #fff;
+    padding: 40px 0 120px 0;
+
+    &Main {
+      .header__inner {
+        &-link {
+          display: flex !important;
+          width: 100%;
+          flex-direction: row;
+          padding: 0;
+          margin-bottom: 24px;
+          svg {
+            margin: 0 16px 0 0;
+          }
+        }
+      }
+      &__inner {
+        border-radius: 0;
+        border: 0;
+        border-bottom: 1px solid #f4f3f3;
+        padding: 0 0 30px 0;
+        margin: 0 0 30px 0;
+        &:last-child {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border: 0 !important;
+        }
+        .button {
+          margin: 0 auto;
+          width: 100%;
+          display: block;
+          max-width: 200px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+@mixin profile-xsm-sm {
+  .profile {
+    &Side {
+      max-width: 313px;
+      &__avatar {
+        width: 160px;
+        height: 195px;
+      }
+    }
+  }
+}

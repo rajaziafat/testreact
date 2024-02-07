@@ -1,0 +1,128 @@
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid #e0e3ea;
+  &__inner {
+    text-align: center;
+    p {
+      color: #665f5f;
+    }
+  }
+}
+.footer2 {
+  padding: 24px 0;
+  background-color: $white;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-links {
+      width: calc(50% - 70px);
+      display: flex;
+      align-items: center;
+      a {
+        font-size: 16px;
+        line-height: 24px;
+        color: #7a7171;
+        font-weight: 400;
+        margin-right: 45px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+      }
+    }
+    &-logo {
+      width: 125px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    p {
+      width: calc(50% - 70px);
+      text-align: end;
+      color: #7a7171;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
+@mixin footer-lg-xlg {
+  .footer2 {
+    padding: 18px 0;
+    &__inner {
+      &-logo {
+        width: 90px;
+      }
+      &-links {
+        a {
+          font-size: 14px;
+          line-height: 20px;
+          margin-right: 30px;
+        }
+      }
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@mixin footer-sm-md {
+  .footer {
+    display: none;
+  }
+  .footer2 {
+    &__inner {
+      &-logo {
+        width: 70px;
+      }
+      &-links {
+        a {
+          font-size: 12px;
+          line-height: 16px;
+          margin-right: 25px;
+        }
+      }
+      p {
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+@mixin footer-xsm-sm {
+  .footer2 {
+    padding: 25px 0;
+    &__inner {
+      flex-direction: column;
+      &-logo {
+        width: 100px;
+        order: -1;
+      }
+      &-links {
+        width: 100%;
+        padding: 30px 0 20px;
+        justify-content: center;
+        a {
+          font-size: 16px;
+          line-height: 24px;
+          margin-right: 35px;
+        }
+      }
+      p {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center
+      }
+    }
+  }
+}

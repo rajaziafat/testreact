@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaBlackItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaBlackItalic.woff") format("woff");
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaExtraBoldRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaExtraBoldRegular.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaBlackRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaBlackRegular.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaExtraBoldItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaExtraBoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaBold.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaBold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaBoldItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaBoldItalic.woff") format("woff");
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaSemiBoldItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaSemiBoldItalic.woff") format("woff");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaSemiBoldRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaSemiBoldRegular.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaMediumItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaMediumItalic.woff") format("woff");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaMediumRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaMediumRegular.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaLightItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaLightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaItalic.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaRegular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaExtraLightRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaExtraLightRegular.woff") format("woff");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaExtraLightItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaExtraLightItalic.woff") format("woff");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaThinItalic.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaThinItalic.woff") format("woff");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaLightRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaLightRegular.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lufga";
+    src:
+        url("FONTSPRINGDEMO-LufgaThinRegular.woff2") format("woff2"),
+        url("FONTSPRINGDEMO-LufgaThinRegular.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
